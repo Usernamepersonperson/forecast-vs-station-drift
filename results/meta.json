@@ -1,0 +1,23 @@
+{
+  "period_start": "2026-08-01",
+  "period_end": "2026-10-31",
+  "stations": [
+    "BAS",
+    "BER",
+    "DAV",
+    "GVE",
+    "JUN",
+    "LUG",
+    "SAE",
+    "SIO",
+    "SMA",
+    "STG"
+  ],
+  "providers": [
+    "open-meteo/ecmwf_ifs025",
+    "open-meteo/meteoswiss_icon_ch2"
+  ],
+  "n_pairs": 703791,
+  "lapse_rate": 6.5,
+  "lead_bin": 1
+}

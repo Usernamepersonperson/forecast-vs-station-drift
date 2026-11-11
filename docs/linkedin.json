@@ -1,0 +1,31 @@
+{
+  "claim": "Forecast error is mostly grid-cell height: a 6.5 K/km fix cut IFS error from 2.8 K to 1.7 K.",
+  "data_label": "open data: MeteoSwiss stations + Open-Meteo forecasts, Aug-Oct 2026",
+  "stats": [
+    [
+      "1.7 K",
+      "ICON-CH2 error, 1 day ahead",
+      "accent"
+    ],
+    [
+      "2.8 K",
+      "ECMWF IFS error, 1 day ahead",
+      "amber"
+    ],
+    [
+      "1.7 K",
+      "IFS after height correction",
+      "green"
+    ]
+  ],
+  "limit": "Only 92 days, one autumn, ten stations; no winter and no confidence intervals yet.",
+  "alt": "Line chart of 2 m temperature error against forecast lead time for two models, raw and height-corrected. The corrected lines sit well below the raw ones.",
+  "hashtags": [
+    "#IoT",
+    "#Weather",
+    "#OpenData",
+    "#Python",
+    "#DataEngineering"
+  ],
+  "post": "Your phone says 12 degrees. The station on the hill says 7. Who is wrong?\n\nI wanted to know how far a point forecast drifts from what a Swiss weather station actually measured, so I built a small open-source tool that pairs hourly forecasts with station observations and scores bias, MAE and RMSE per station, lead time and variable.\n\nI ran it over August to October 2026 at ten stations, from 273 m to 3571 m, 703,791 forecast/observation pairs. One day ahead, the 2 km ICON-CH2 model was off by 1.7 K on average for 2 m temperature. The 25 km ECMWF IFS was off by 2.8 K, mostly because its grid cell sits at the wrong height. Shifting the forecast from grid height to station height with a plain 6.5 K/km lapse rate brought IFS down to 1.7 K.\n\nWhat is not verified: this is one autumn, so no winter inversions or snow, there are no confidence intervals, and Open-Meteo's previous-runs archive is a derived product, not raw model output. The correction over-shoots on summits like Jungfraujoch.\n\nIf you compare forecasts to ground truth, which error would you want to see first: bias, MAE, or something event-based?\n\nCode: https://github.com/Usernamepersonperson/forecast-vs-station-drift"
+}
