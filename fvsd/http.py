@@ -10,7 +10,7 @@ from pathlib import Path
 
 USER_AGENT = (
     "forecast-vs-station-drift/0.1 "
-    "(+https://github.com/Usernamepersonperson/forecast-vs-station-drift)"
+    "(+https://github.com/VB-Builds/forecast-vs-station-drift)"
 )
 
 # A getter takes (url, headers) and returns the response body.
